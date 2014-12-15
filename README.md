@@ -1,2 +1,2 @@
-latinotrading
-=============
+AMD APP
+=======

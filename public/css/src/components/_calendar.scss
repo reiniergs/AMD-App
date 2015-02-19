@@ -1,0 +1,177 @@
+$border-color : #ccc;
+
+/*****************************
+ *          COLORS
+ *****************************/
+ $blue-light  : #009bc8;
+ $blue-strong : #004164;
+ $mainBlue : $blue-strong;
+ $gray        : #ccc;
+ $gray-background : rgb(247,247,247);
+ $text-gray-disabled : #dddddd;
+ $text-gray-color : rgb(102,102,102);
+ $orange-color : rgb(247,145,52);
+
+
+.app {
+    $border-color : #ccc;
+    $font-color : rgb(64,64,64);
+    $font-color-light : rgb(51,51,51);
+    $color-blue-strong : #004164;
+    $color-blue : #1a9ac5;  
+    
+
+        .clndr {
+            margin-top: -16px;
+            position: absolute;
+            z-index: 1;
+            padding: 10px;
+            border: 1px solid rgb(204, 204, 204);
+            box-shadow: 0px 5px 8px 1px $gray;
+            background-color: white;
+
+            .clndr-controls {
+                background-color: #004164;
+                overflow: hidden;
+                padding: 10px 0;
+                position: relative;
+                color: #FFF;
+                width: 384px;
+
+                .month {
+                    padding: 10px 0;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: "Conv_FuturaStd-Heavy";
+                    white-space: nowrap;
+                    width: 100%;
+                    position: absolute;
+                }
+
+                .clndr-control-button {
+                    float:left;
+                    position:relative;
+                    z-index: 10;
+                    cursor: pointer;
+
+                    &.rightalign{
+                        float:right;
+                    } 
+                }
+
+                .clndr-previous-button,
+                .clndr-next-button {
+                    font-family: FontAwesome;
+                    color: #FFF;
+                    font-size: 30px;
+                    padding : 20px;
+                }
+
+
+                .clndr-previous-button:before {
+                    content: "\f104";
+                }
+
+                .clndr-next-button:after {
+                    content: "\f105";
+                }
+            }
+
+            .clndr-table {
+                width: 384px;
+                margin-bottom: 0px;
+
+                thead, tbody, tfoot{
+                    
+                    tr {
+                        td {
+                            padding: 0.96rem 0.625rem 0.96rem;
+
+                            &.adjacent-month{
+                                background: #EBEBEB;
+                              
+                                div{
+                                    color: #DBDBDB;
+                                }
+                            }
+
+                            &.selected-date{
+                                background: #004164;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+                td  {
+                    border-right: 1px solid #e5e5e5;
+                    border-bottom: 1px solid #e5e5e5;
+                    text-align: center;
+                    color: $mainBlue;
+                    font-weight: bold;
+                    font-size: 11px;
+                    position: relative;
+
+                    &.busy {
+                       color : rgb(152,152,152);
+                       background: url(../images/rate-calendar/busy.jpg) center center no-repeat;
+                    }
+                    
+                    &:not(.inactive){
+                        
+                        &:hover{
+                            background: #E4E4E4;
+                        }
+                    }
+
+                    &.selected-day {
+                        background: $color-blue-strong;
+                        color: #FFF;
+                        span {
+                            color: #FFF !important;
+                        }
+                    }
+
+                    &.path-day {
+                        background: $color-blue;
+                        color: #FFF;
+                        span {
+                            color: #FFF !important;
+                        }
+                    }
+
+                    
+
+                    .day-number {
+                       display: block;
+                       position: relative;
+                       top : -10px;
+                       left: -15px;
+                    }
+                    .rate-number {
+                       display: block;
+                       position: absolute;
+                       bottom : 0px;
+                       left: 6px;
+                       color : rgb(102,102,102); 
+                       font-weight: 100;
+                    }
+                }
+
+                .header-days td {
+                    color: #a0a0a0;
+                }
+            }
+
+            .day {
+                cursor: pointer;
+                
+                &.past, &.today{
+                    background: #fff;
+                    cursor: default;
+                    color: #F5F5F5;
+                }
+            }
+        }    
+}

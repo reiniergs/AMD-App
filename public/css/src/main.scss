@@ -1,10 +1,10 @@
-@import "./appVariables";
 @import "foundation/scss/foundation"; 
 @import "font-awesome/stylesheets/font-awesome";
-@import "./orbit";
-@import "./contact-us";
+@import "components/calendar";
 
-form[name="loginForm"] {
-	
+
+body {
+	margin: 20px;
 }
+
 

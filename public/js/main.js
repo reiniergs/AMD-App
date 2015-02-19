@@ -38,7 +38,7 @@ require.config({
         "foundation.tab": "vendor/foundation/foundation.tab",
         "foundation.tooltip": "vendor/foundation/foundation.tooltip",
         "foundation.topbar": "vendor/foundation/foundation.topbar",
-        "calendar": "vendor/calendar",
+        "calendar": "vendor/clndr",
         "moment": "vendor/moment",
         "domReady" : "vendor/domReady"
     },
